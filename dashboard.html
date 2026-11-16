@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
     <title>Dashboard</title>
 </head>
+
 <body>
-    <div class="header">HEADER</div>
+    <div class="header">
+        <form class="search">
+            <a href="#" onclick="event.target.parentNode.submit();"><img src="src/search.svg" alt="search"></a>
+            <input type="text" name="search" id="search">
+        </form>
+        <div class="notification-bar">
+            <img src="src/notification.svg" alt="notification">
+            <div class="profile-icon"><img src="src/profiles/current.png" alt="">
+                <p>Morgan Oakley</p>
+            </div>
+        </div>
+        <div class="profile-welcome">
+            <div class="profile-icon"><img src="src/profiles/current.png" alt="">
+                <p>Hi there,</p>
+                <h1>Morgan Oakley</h1>
+                </div>
+        </div>
+        <div class="action-buttons">buttons</div>
+    </div>
     <div class="sidebar">
-        <div class="logo"><img class="icon" src="src/logo.svg" alt=""><p>Dashboard</p></div>
+        <div class="logo"><img class="icon" src="src/logo.svg" alt="">
+            <p>Dashboard</p>
+        </div>
         <ul class="menu">
             <li class="menu_item"><a href=""><img class="icon" src="src/home.svg" alt="">Home</a></li>
             <li class="menu_item"><a href=""><img class="icon" src="src/profile.svg" alt="">Profile</a></li>
@@ -23,4 +45,5 @@
     </div>
     <div class="main">MAIN</div>
 </body>
+
 </html>

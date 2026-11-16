@@ -4,22 +4,95 @@
     box-sizing: border-box;
     font-family: "Zen Dots", sans-serif;
     margin: 0;
+    text-decoration-line: none;
 }
 
 body {
     margin: 0;
-    height:100vh;
+    height: 100vh;
     display: grid;
     grid-template: auto 1fr/1fr 4fr;
-    grid-template-areas: 
-    "sidebar header"
-    "sidebar main";
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
 }
 
 .header {
     background-color: #ffffff;
     grid-area: header;
+    display: grid;
+    grid-template: 1fr 2fr/2fr 1fr;
+    gap: 20px
 }
+
+.search {
+    display: flex;
+    gap: 15px;
+}
+
+.search>input {
+    border-radius: 150px;
+    border: none;
+    padding-left: 10px;
+    background-color: #E2E8F0;
+    flex: 1;
+}
+
+input:focus {
+    outline: none;
+}
+
+.profile-icon>img {
+    border-radius: 50%;
+    background-color: yellow;
+    padding: 1%;
+    width: 70px;
+    height: 70px;
+
+}
+
+.profile-welcome {
+    height: min-content;
+}
+
+.profile-icon {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto 1fr;
+    column-gap: 4%;
+}
+
+.profile-icon > img {
+    grid-row:1/3;
+}
+.profile-icon > p {
+    flex:1
+}
+
+.notification-bar {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.notification-bar > .profile-icon {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    flex: 1
+}
+
+.notification-bar > .profile-icon>img {
+    width: 40px;
+    height: 40px;
+
+}
+
+.header>* {
+    /* border: 1px solid black; */
+    padding: 10px
+}
+
 
 .sidebar {
     background-color: #1992D4;
@@ -37,6 +110,8 @@ body {
     font-size: 2em;
     font-weight: bold;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
@@ -47,19 +122,18 @@ body {
     margin-top: 20%;
 }
 
-.menu_item  a {
+.menu_item a {
     color: inherit;
     text-decoration-line: none;
     display: flex
-    
 }
 
-.menu > .menu_item:nth-child(7)  {
+.menu>.menu_item:nth-child(7) {
     margin-top: 20%;
 }
 
 
-.main { 
+.main {
     background-color: #E2E8F0;
     grid-area: main;
 }
